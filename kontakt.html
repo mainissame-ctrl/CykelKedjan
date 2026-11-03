@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt – Cykelverkstaden Kedjan</title>
+  <meta name="description" content="Kontakta Cykelverkstaden Kedjan eller boka en tid.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="sidhuvud">
+    <div class="sidhuvud-inre">
+      <a class="logotyp" href="index.html">Cykelverkstaden <span>Kedjan</span></a>
+      <nav class="global" aria-label="Huvudmeny"><ul><li><a href="index.html">Start</a></li><li><a href="verkstad.html">Verkstaden</a></li><li><a href="om-oss.html">Om oss</a></li><li><a href="kontakt.html" aria-current="page">Kontakt</a></li></ul></nav>
+    </div>
+  </header>
+  <div>
+  
+  <main>
+    <h1>Kontakt och bokning</h1>
+    <p class="ingress">Fyll i formuläret så svarar vi inom några dagar.</p>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Dina uppgifter</legend>
+        <div class="falt">
+          <label for="namn">Namn</label>
+          <input type="text" id="namn" name="namn" autocomplete="name" required>
+        </div>
+        <div class="falt">
+          <label for="epost">E-postadress</label>
+          <input type="email" id="epost" name="epost" autocomplete="email" required>
+        </div>
+        <div class="falt">
+          <label for="telefon">Telefon (valfritt)</label>
+          <input type="tel" id="telefon" name="telefon" autocomplete="tel">
+        </div>
+        <div class="falt">
+          <label for="datum">Önskat datum</label>
+          <input type="date" id="datum" name="datum">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Ditt ärende</legend>
+        <div class="falt">
+          <label for="amne">Vad gäller det?</label>
+          <select id="amne" name="amne">
+            <option value="laga">Laga min cykel</option>
+            <option value="skola">Cykelskola</option>
+            <option value="kopa">Köpa begagnad cykel</option>
+            <option value="lamna">Lämna in en cykel</option>
+            <option value="annat">Något annat</option>
+          </select>
+        </div>
+        <div class="falt">
+          <span class="etikett" id="typ-etikett">Typ av cykel</span>
+          <div class="radiorad" role="radiogroup" aria-labelledby="typ-etikett">
+            <label><input type="radio" name="typ" value="vanlig" checked> Vanlig</label>
+            <label><input type="radio" name="typ" value="elcykel"> Elcykel</label>
+            <label><input type="radio" name="typ" value="barn"> Barncykel</label>
+          </div>
+        </div>
+        <div class="falt">
+          <label for="antal">Antal cyklar</label>
+          <input type="number" id="antal" name="antal" min="1" max="5" value="1">
+        </div>
+        <div class="falt">
+          <span class="etikett" id="onskemal-etikett">Jag vill också</span>
+          <div class="kryssrad" role="group" aria-labelledby="onskemal-etikett">
+            <label><input type="checkbox" name="onskemal" value="medlem"> Bli medlem</label>
+            <label><input type="checkbox" name="onskemal" value="nyhetsbrev"> Få nyhetsbrevet</label>
+            <label><input type="checkbox" name="onskemal" value="frivillig"> Bli frivillig</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="falt">
+        <label for="meddelande">Meddelande</label>
+        <textarea id="meddelande" name="meddelande" rows="5"></textarea>
+      </div>
+      <button class="knapp" type="submit">Skicka</button>
+    </form>
+  </main>
+  </div>
+  <footer class="sidfot">
+    <div class="sidfot-inre">
+      <span>© 2026 Cykelverkstaden Kedjan (fiktiv organisation, skapad som skoluppgift av Abdulraoof Al Saffow)</span>
+      <span><a href="rapport.html">Läs rapporten för webbplatsen</a></span>
+    </div>
+  </footer>
+</body>
+</html>

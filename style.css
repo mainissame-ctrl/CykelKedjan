@@ -1,0 +1,239 @@
+/* Cykelverkstaden Kedjan – gemensam CSS */
+:root {
+  --bg: #f2f7f5;
+  --ink: #1f2933;
+  --accent: #0f766e;
+  --accent-dark: #0b5550;
+  --stone: #17323a;
+  --line: #cfdcd8;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--accent-dark); }
+a:hover, a:focus { color: var(--accent); }
+
+/* ---------- Sidhuvud och global navigering ---------- */
+header.sidhuvud {
+  background: var(--stone);
+  color: #fff;
+}
+
+.sidhuvud-inre {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+
+.logotyp {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-decoration: none;
+}
+.logotyp span { color: #fbbf24; }
+
+nav.global ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+nav.global a {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+nav.global a:hover,
+nav.global a:focus { background: rgba(255, 255, 255, 0.18); }
+
+nav.global a[aria-current="page"] { background: var(--accent); }
+
+/* ---------- Innehåll ---------- */
+main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.75rem; }
+h2 { font-size: 1.4rem; margin: 2rem 0 0.5rem; }
+h3 { font-size: 1.15rem; margin: 0 0 0.4rem; }
+
+.ingress { font-size: 1.15rem; color: #3e4c59; max-width: 60ch; }
+
+.hero { margin: 0 0 2rem; }
+.hero img { width: 100%; border-radius: 8px; }
+
+.knapp {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.65rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.knapp:hover, .knapp:focus { background: var(--accent-dark); color: #fff; }
+
+/* Kort i rutnät (grid) */
+.kortrutnat {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.kort {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.kort-text { padding: 1rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+.kort-text p { margin: 0; }
+.kort-text .knapp { align-self: flex-start; margin-top: auto; }
+
+/* Två kolumner: innehåll + sidoruta */
+.tvakolumner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.sidoruta {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+  border-radius: 6px;
+  padding: 1rem;
+  align-self: start;
+}
+.sidoruta h2 { margin-top: 0; font-size: 1.1rem; }
+.sidoruta ul { margin: 0; padding-left: 1.2rem; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: var(--card);
+  margin: 1rem 0;
+}
+th, td { border: 1px solid var(--line); padding: 0.55rem 0.7rem; text-align: left; }
+th { background: #e1ece8; }
+.tabellram { overflow-x: auto; }
+
+/* ---------- Lokal navigering (kurser) ---------- */
+nav.lokal {
+  background: #e1ece8;
+  border-bottom: 1px solid var(--line);
+}
+nav.lokal ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+nav.lokal a {
+  display: block;
+  padding: 0.6rem 0.9rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+nav.lokal a:hover, nav.lokal a:focus { border-bottom-color: var(--accent); }
+nav.lokal a[aria-current="page"] { border-bottom-color: var(--accent); font-weight: 700; }
+
+/* ---------- Formulär ---------- */
+form {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.25rem;
+  max-width: 640px;
+}
+fieldset { border: 1px solid var(--line); border-radius: 6px; margin: 0 0 1.2rem; padding: 0.8rem 1rem; }
+legend { font-weight: 700; padding: 0 0.4rem; }
+
+.falt { margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.3rem; }
+.falt label, .falt .etikett { font-weight: 600; }
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"],
+input[type="number"], select, textarea {
+  font: inherit;
+  padding: 0.55rem 0.6rem;
+  border: 1px solid #9aa5b1;
+  border-radius: 4px;
+  width: 100%;
+  background: #fff;
+}
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid #fbbf24;
+  outline-offset: 1px;
+}
+
+.radiorad, .kryssrad { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+.radiorad label, .kryssrad label { font-weight: 400; display: inline-flex; gap: 0.4rem; align-items: center; }
+
+/* ---------- Sidfot ---------- */
+footer.sidfot {
+  background: var(--stone);
+  color: #e4e7eb;
+  font-size: 0.9rem;
+}
+.sidfot-inre {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  justify-content: space-between;
+}
+footer.sidfot a { color: #fde68a; }
+
+/* ---------- Responsiv design ---------- */
+@media (min-width: 700px) {
+  .tvakolumner { grid-template-columns: 2fr 1fr; }
+  h1 { font-size: 2.4rem; }
+}
+
+@media (max-width: 520px) {
+  nav.global ul { width: 100%; }
+  nav.global li { flex: 1 1 45%; }
+  nav.global a { text-align: center; background: rgba(255, 255, 255, 0.08); }
+}

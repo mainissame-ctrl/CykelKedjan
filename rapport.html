@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport för uppgift 3 i Webbteknik 1</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+        body {
+            background-color: #FFF;
+            color: #000;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            max-width: 80ch;
+            margin-left: 2ch;
+        }
+        header,
+        section {
+            border-bottom: 1px solid #999;
+        }
+        img {
+            max-width: 100%;
+        }
+        p {
+            text-align: justify;
+        }
+        h2 {
+            margin-bottom: 0.2em;
+        }
+        h3 {
+            margin-top: 0.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rapport för uppgift 3</h1>
+    </header>
+    <main>
+        <section>
+            <h2>1. Syfte och målgrupp</h2>
+            <p>Webbplatsen är gjord för den påhittade ideella föreningen Cykelverkstaden Kedjan, där besökare lagar sina cyklar själva med hjälp av frivilliga mekaniker.</p>
+            <p>Syftet med webbplatsen är att förklara hur verkstaden fungerar, få besökare att komma förbi eller boka en tid samt visa vilka tjänster som finns: laga själv, cykelskola och försäljning av begagnade cyklar.</p>
+            <p>Målgruppen består av vardagscyklister som har en trasig cykel och vill spara pengar, nybörjare och nyinflyttade som vill lära sig cykla eller cykla i trafiken, personer som söker en billig cykel (ofta studenter och familjer) samt potentiella frivilliga som vill bidra.</p>
+            
+            <h3>Användarnas behov</h3>
+            <ul>
+                <li>Snabbt kunna se öppettider och om man behöver boka.</li>
+                <li>Förstå att man själv ska laga cykeln och att hjälp finns.</li>
+                <li>Kunna se vad tjänsterna kostar.</li>
+                <li>Kunna kontakta verkstaden utan att ringa.</li>
+                <li>Kunna läsa webbplatsen på mobilen, ofta utomhus eller på väg till verkstaden.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>2. Kravspecifikation</h2>
+            <h3>Innehåll</h3>
+            <ul>
+                <li><strong>I1:</strong> Startsidan ska förklara vad verkstaden är och visa de tre verksamheterna.</li>
+                <li><strong>I2:</strong> Det ska finnas en sida per verksamhet (laga själv, cykelskola och begagnade cyklar) med tider och pris.</li>
+                <li><strong>I3:</strong> Öppettider ska finnas på startsidan.</li>
+                <li><strong>I4:</strong> Det ska finnas en översikt som jämför verksamheterna.</li>
+                <li><strong>I5:</strong> Det ska finnas en sida om föreningen med historik, värderingar och medlemsavgifter.</li>
+                <li><strong>I6:</strong> Text och bilder ska finnas, och bilderna ska ha alternativtext.</li>
+                <li><strong>I7:</strong> Innehållet ska vara på svenska.</li>
+            </ul>
+            <h3>Funktion</h3>
+            <ul>
+                <li><strong>F1:</strong> Global navigering mellan huvudavsnitten ska finnas på alla sidor.</li>
+                <li><strong>F2:</strong> Lokal navigering mellan de fyra sidorna i avsnittet Verkstaden ska finnas.</li>
+                <li><strong>F3:</strong> Aktuell sida ska vara markerad i menyerna.</li>
+                <li><strong>F4:</strong> Användaren ska kunna skicka en förfrågan via ett formulär med flera typer av inmatning.</li>
+                <li><strong>F5:</strong> Webbplatsen ska fungera från 350 px bredd och uppåt.</li>
+                <li><strong>F6:</strong> Rapporten ska nås via en länk på startsidan.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>3. Beskrivning av arbetet</h2>
+            <p></p>
+            <h3>Strategiplanet</h3>
+            <p>Jag började med att formulera syfte och målgrupper (avsnitt 1), eftersom Garrett (2011) betonar att alla senare val ska kunna motiveras med webbplatsens mål och användarnas behov. Webbplatsen är informativ, och det enda målet med interaktion är en förfrågan.</p>
+            <h3>Omfångsplanet</h3>
+            <p>Behoven omvandlades till innehålls- och funktionskrav (avsnitt 2). Kraven hjälpte mig att utesluta sådant som inte behövs, till exempel webbshop eller tidsbokning i realtid.</p>
+            <h3>Strukturplanet</h3>
+            <p>Innehållet organiserades i fyra huvudavsnitt: Start, Verkstaden, Om oss och Kontakt. Verkstaden har undersidor för varje verksamhet. Strukturen är hierarkisk, vilket enligt Garrett (2011) passar innehåll med tydlig över- och underordning. Undersidorna har samma uppbyggnad för att göra dem igenkännbara.</p>
+            <h3>Skelettplanet</h3>
+            <p>Global navigering ligger överst på alla sidor och lokal navigering visas under den i avsnittet Verkstaden. Aktuell sida markeras i båda. Sidorna består av en huvudkolumn och en sidoruta med fakta som hamnar under huvudtexten på smala skärmar. CSS Grid används för sidans struktur och kortlistor, Flexbox för menyer och formulärrader.</p>
+            <h3>Ytplanet</h3>
+            <p>Färgskalan är grönblå med gul accent, för att förmedla något hållbart och lättillgängligt. Kontrasten mellan text och bakgrund har kontrollerats. Typsnittet är ett systemtypsnitt utan serifer för god läsbarhet på små skärmar.</p>
+            <h3>Teknik</h3>
+            <p>Webbplatsen består enligt underlaget av sju HTML-sidor (utöver rapporten) och en gemensam CSS-fil, <code>style.css</code>. Ingen CSS finns i HTML-filerna, rapporten undantagen. Responsiviteten bygger på viewport-metataggen, flexibla enheter, <code>auto-fit</code> i rutnätet och media queries.</p>
+        </section>
+        <section>
+            <h2>4. Bilder</h2>
+            <p>Alla bilder beskrivs i underlaget som illustrationer genererade med ett Python-skript (biblioteket Pillow). De visar stiliserade cyklar mot färgade bakgrunder och föreställer inga riktiga personer eller platser.</p>
+            <ul>
+                <li><strong>Hero-bild:</strong> skapad i storlekarna 1600 × 600 px för stor skärm och 600 × 400 px för liten skärm. Sparad som JPEG och WebP.</li>
+                <li><strong>Bilder för laga själv, cykelskola och begagnat:</strong> skapade i 600 × 400 px och sparade som JPEG.</li>
+                <li><strong>Bild för Om oss:</strong> skapad i 800 × 500 px och sparad som JPEG.</li>
+                <li>Alla bilder har attributen <code>width</code> och <code>height</code> för att minska layoutförskjutningar vid inladdning.</li>
+                <li>Bilder längre ner på sidorna laddas med <code>loading="lazy"</code>.</li>
+            </ul>
+            <p>På startsidan används <code>picture</code>-elementet för att visa olika bildfiler beroende på skärmbredd: en bred bild från 800 px bredd och en mindre bild på smala skärmar. WebP erbjuds som första val med JPEG som reserv, så att mobilanvändare inte behöver ladda den stora bildfilen.</p>
+        </section>
+        <section>
+            <h2>5. Utvärdering mot kravspecifikationen</h2>
+            <h3>Innehåll</h3>
+            <ul>
+                <li><strong>I1:</strong> Startsidan ska förklara vad verkstaden är och visa de tre verksamheterna. <strong>Uppfyllt.</strong> Startsidan har en förklarande rubrik och ingress samt tre kort som presenterar verksamheterna.</li>
+                <li><strong>I2:</strong> Det ska finnas en sida per verksamhet (laga själv, cykelskola och begagnade cyklar) med tider och pris. <strong>Uppfyllt.</strong> <code>laga.html</code>, <code>cykelskola.html</code> och <code>begagnat.html</code> har tider och pris.</li>
+                <li><strong>I3:</strong> Öppettider ska finnas på startsidan. <strong>Uppfyllt.</strong> Öppettider finns i en ruta på startsidan.</li>
+                <li><strong>I4:</strong> Det ska finnas en översikt som jämför verksamheterna. <strong>Uppfyllt.</strong> <code>verkstad.html</code> har en jämförelsetabell.</li>
+                <li><strong>I5:</strong> Det ska finnas en sida om föreningen med historik, värderingar och medlemsavgifter. <strong>Uppfyllt.</strong> <code>om-oss.html</code> har historik, värderingar och medlemsavgifter.</li>
+                <li><strong>I6:</strong> Text och bilder ska finnas, och bilderna ska ha alternativtext. <strong>Uppfyllt.</strong> Text och bilder förekommer på sidorna, och innehållsbilder har alternativtext.</li>
+                <li><strong>I7:</strong> Innehållet ska vara på svenska. <strong>Uppfyllt.</strong> Allt innehåll är på svenska.</li>
+            </ul>
+            <h3>Funktion</h3>
+            <ul>
+                <li><strong>F1:</strong> Global navigering mellan huvudavsnitten ska finnas på alla sidor. <strong>Uppfyllt.</strong> Huvudmenyn finns överst på alla sidor.</li>
+                <li><strong>F2:</strong> Lokal navigering mellan de fyra sidorna i avsnittet Verkstaden. <strong>Uppfyllt.</strong> De fyra sidorna i Verkstaden delar en lokal meny.</li>
+                <li><strong>F3:</strong> Aktuell sida ska vara markerad i menyerna. <strong>Uppfyllt.</strong> Aktuell sida markeras med <code>aria-current</code> och färg.</li>
+                <li><strong>F4:</strong> Användaren ska kunna skicka en förfrågan via ett formulär med flera typer av inmatning. <strong>Uppfyllt.</strong> Formuläret har text, e-post, telefon, datum, nummer, rullista, radioknappar, kryssrutor och textområde.</li>
+                <li><strong>F5:</strong> Webbplatsen ska fungera från 350 px bredd och uppåt. <strong>Behöver kontrolleras.</strong> Underlaget anger att layouten ska kontrolleras från 350 px i webbläsarens utvecklarverktyg; genomför kontrollen och ändra bedömningen om det behövs.</li>
+                <li><strong>F6:</strong> Rapporten ska nås via en länk på startsidan. <strong>Uppfyllt.</strong> Länk till rapporten finns i sidfoten på alla sidor, även startsidan.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>6. Användartest</h2>
+            <h3>Med metoden ”Tänka högt”</h3>
+            <p>Testet är tänkt att genomföras med metoden ”tänka högt” <!--Jag hade inga individer sför att testa--> med minst tre testpersoner. Testpersonerna får utföra uppgifterna nedan medan de berättar vad de tänker och vad de försöker göra.</p>
+            <h3>Uppgifter</h3>
+            <ol>
+                <li>Ta reda på när du kan komma och laga en punktering.</li>
+                <li>Ta reda på vad en begagnad cykel kostar.</li>
+                <li>Skicka en förfrågan om cykelskolan.</li>
+            </ol>
+            <h3>Resultat</h3>
+            <ul>
+                <li>Testperson 1: Ange testpersonens relevanta bakgrund, vad personen observerade/gjorde och vilken åtgärd som genomfördes.</li>
+                <li>Testperson 2: Ange testpersonens relevanta bakgrund, vad personen observerade/gjorde och vilken åtgärd som genomfördes.</li>
+                <li>Testperson 3: Ange testpersonens relevanta bakgrund, vad personen observerade/gjorde och vilken åtgärd som genomfördes.</li>
+            </ul>
+            <h3>Förändringar utifrån testet</h3>
+            <p>Beskriv här vilka ändringar du faktiskt gjorde utifrån testpersonernas synpunkter och iakttagelser. Om inga ändringar behövdes, förklara varför.</p>
+        </section>
+        <section>
+            <h2>Källförteckning</h2>
+            <ul>
+                <li>Eftersom jag inte har använt boken av Garrett, men istället kollade upp information angående hans metoder, så kan jag inte ange specifika källor, samt sidor.</li>
+                <!-- Jag glömde att lägga till källor här. -->
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
